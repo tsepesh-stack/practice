@@ -96,13 +96,19 @@ namespace Training1
             // Book.TotalPrint();
 
             // Item использование this в полной мере
-            Item item1 = new Item("back", 323.43);
-            item1.Print();
-            Item item2 = new Item("table");
-            item2.Print();
-            Item item3 = new Item();
-            item3.Print();
-            Item.PrintInfo();
+            // Item item1 = new Item("back", 323.43);
+            // item1.Print();
+            // Item item2 = new Item("table");
+            // item2.Print();
+            // Item item3 = new Item();
+            // item3.Print();
+            // Item.PrintInfo();
+
+            // Product использование git and set
+            Product pr1 = new Product("Мышь", -12);
+            pr1.Print();
+            
+
 
             
             
