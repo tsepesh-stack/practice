@@ -5,6 +5,8 @@ namespace Training1
     {
         static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
             // Создаем объект класса Person и заполняем его данными
             // Person person = new Person();
             // person.name = Console.ReadLine();
@@ -104,9 +106,14 @@ namespace Training1
             // item3.Print();
             // Item.PrintInfo();
 
-            // Product использование git and set
-            Product pr1 = new Product("Мышь", -12);
+            // Product использование get and set
+            // Product pr1 = new Product("Мышь", -12);
+            // pr1.Print();
+
+            // Person тренировка с get and set
+            Person pr1 = new Person("Иван",10);
             pr1.Print();
+            System.Console.WriteLine($"Совершеннолетний: {pr1.IsAdult()}");
             
 
 
