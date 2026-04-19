@@ -153,43 +153,49 @@ namespace Training1
 
 
             // Employee программа на добавление рабочих
-            List<Employee> employees = new List<Employee>();
-            int choice;
-            do
-            {
-            Console.WriteLine("1 - Добавить рабочего");
-            Console.WriteLine("2 - Добавить менеджера");
-            Console.WriteLine("0 - Выход");
-            Console.Write("Выбор действия: ");
-            choice = int.Parse(Console.ReadLine());
+            // List<Employee> employees = new List<Employee>();
+            // int choice;
+            // do
+            // {
+            // Console.WriteLine("1 - Добавить рабочего");
+            // Console.WriteLine("2 - Добавить менеджера");
+            // Console.WriteLine("0 - Выход");
+            // Console.Write("Выбор действия: ");
+            // choice = int.Parse(Console.ReadLine());
+            // if (choice == 1)
+            // {
+            //     Console.Write("Введите имя рабочего: ");
+            //     string name = Console.ReadLine();
+            //     Console.Write("Введите ставку за час: ");
+            //     double rate = double.Parse(Console.ReadLine());
+            //     Console.Write("Введите отработанные часы: ");
+            //     int hours = int.Parse(Console.ReadLine());
+            //     employees.Add(new Worker(name, rate, hours));
+            // }
+            // else if (choice == 2)
+            // {
+            //     Console.Write("Введите имя менеджера: ");
+            //     string name = Console.ReadLine();
+            //     Console.Write("Введите базовую зарплату: ");
+            //     double baseSalary = double.Parse(Console.ReadLine());
+            //     Console.Write("Введите бонус: ");
+            //     double bonus = double.Parse(Console.ReadLine());
+            //     employees.Add(new Manager(name, baseSalary, bonus));
+            // }
+            // } while (choice != 0);
+            // Console.WriteLine($"Всего сотрудников: {employees.Count}");
+            // foreach (var emp in employees)
+            // {
+            // Console.WriteLine($"{emp.name}: {emp.GetSalary()} руб.");}
 
-            if (choice == 1)
+
+            // Instrument легая практика наследования
+            Instrument[] inst1 =new Instrument[1];
+            inst1[0] = new Piano();
+            foreach (Instrument el in inst1)
             {
-                Console.Write("Введите имя рабочего: ");
-                string name = Console.ReadLine();
-                Console.Write("Введите ставку за час: ");
-                double rate = double.Parse(Console.ReadLine());
-                Console.Write("Введите отработанные часы: ");
-                int hours = int.Parse(Console.ReadLine());
-                employees.Add(new Worker(name, rate, hours));
+                el.Play();
             }
-            else if (choice == 2)
-            {
-                Console.Write("Введите имя менеджера: ");
-                string name = Console.ReadLine();
-                Console.Write("Введите базовую зарплату: ");
-                double baseSalary = double.Parse(Console.ReadLine());
-                Console.Write("Введите бонус: ");
-                double bonus = double.Parse(Console.ReadLine());
-                employees.Add(new Manager(name, baseSalary, bonus));
-            }
-            } while (choice != 0);
-
-            Console.WriteLine($"Всего сотрудников: {employees.Count}");
-            foreach (var emp in employees)
-            {
-            Console.WriteLine($"{emp.name}: {emp.GetSalary()} руб.");}
-
             
 
             
