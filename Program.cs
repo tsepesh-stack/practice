@@ -111,12 +111,28 @@ namespace Training1
             // pr1.Print();
 
             // Person тренировка с get and set
-            Person pr1 = new Person("Иван",10);
-            pr1.Print();
-            System.Console.WriteLine($"Совершеннолетний: {pr1.IsAdult()}");
+            // Person pr1 = new Person("Иван",10);
+            // pr1.Print();
+            // System.Console.WriteLine($"Совершеннолетний: {pr1.IsAdult()}");
             
+            // Book повторние тренировка
+            // Book book1 = new Book("Война и мир", "Толстой");
+            // book1.Print();
+            // Book book2 = new Book("Мастер и Маргарита", "Булгаков");
+            // book2.Print();
+            // Book book3 = new Book();
+            // book3.Print();
 
-
+            // Animal с использованием наследования
+            Animal[] animals = new Animal[3];
+            Dog bud = new Dog("bud");
+            Cat whi = new Cat("whi");
+            Animal an = new Animal("Create");
+            animals[0] = bud;
+            animals[1] = whi;
+            animals[2] = an;
+            foreach (Animal el in animals)
+            el.Makesound();
             
             
             
