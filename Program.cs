@@ -135,20 +135,62 @@ namespace Training1
             // el.Makesound();
 
             // Shape математическое вычесление площади круга или радиуса
-            System.Console.WriteLine("Вычисление площади");
-            Shape[] sh = new Shape[2];
-            System.Console.Write("Ввведите радиус для вычисления площади круга: ");
-            double n = double.Parse(Console.ReadLine());
-            sh[0] = new Circle(n);
-            System.Console.Write("Введи ширину для вычесления площади прямоугольника: ");
-            double a = double.Parse(Console.ReadLine());
-            System.Console.Write("Введи высоту для вычесления площади прямоугольника: ");
-            double b = double.Parse(Console.ReadLine());
-            sh[1] = new Rectangle(a,b);
-            foreach(Shape el in sh)
+            // System.Console.WriteLine("Вычисление площади");
+            // Shape[] sh = new Shape[2];
+            // System.Console.Write("Ввведите радиус для вычисления площади круга: ");
+            // double n = double.Parse(Console.ReadLine());
+            // sh[0] = new Circle(n);
+            // System.Console.Write("Введи ширину для вычесления площади прямоугольника: ");
+            // double a = double.Parse(Console.ReadLine());
+            // System.Console.Write("Введи высоту для вычесления площади прямоугольника: ");
+            // double b = double.Parse(Console.ReadLine());
+            // sh[1] = new Rectangle(a,b);
+            // foreach(Shape el in sh)
+            // {
+            //     System.Console.WriteLine($"Площадь: {el.GetArea():F2}");
+            // }
+
+
+
+            // Employee программа на добавление рабочих
+            List<Employee> employees = new List<Employee>();
+            int choice;
+            do
             {
-                System.Console.WriteLine($"Площадь: {el.GetArea():F2}");
+            Console.WriteLine("1 - Добавить рабочего");
+            Console.WriteLine("2 - Добавить менеджера");
+            Console.WriteLine("0 - Выход");
+            Console.Write("Выбор действия: ");
+            choice = int.Parse(Console.ReadLine());
+
+            if (choice == 1)
+            {
+                Console.Write("Введите имя рабочего: ");
+                string name = Console.ReadLine();
+                Console.Write("Введите ставку за час: ");
+                double rate = double.Parse(Console.ReadLine());
+                Console.Write("Введите отработанные часы: ");
+                int hours = int.Parse(Console.ReadLine());
+                employees.Add(new Worker(name, rate, hours));
             }
+            else if (choice == 2)
+            {
+                Console.Write("Введите имя менеджера: ");
+                string name = Console.ReadLine();
+                Console.Write("Введите базовую зарплату: ");
+                double baseSalary = double.Parse(Console.ReadLine());
+                Console.Write("Введите бонус: ");
+                double bonus = double.Parse(Console.ReadLine());
+                employees.Add(new Manager(name, baseSalary, bonus));
+            }
+            } while (choice != 0);
+
+            Console.WriteLine($"Всего сотрудников: {employees.Count}");
+            foreach (var emp in employees)
+            {
+            Console.WriteLine($"{emp.name}: {emp.GetSalary()} руб.");}
+
+            
 
             
             
