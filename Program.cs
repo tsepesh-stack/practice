@@ -124,15 +124,35 @@ namespace Training1
             // book3.Print();
 
             // Animal с использованием наследования
-            Animal[] animals = new Animal[3];
-            Dog bud = new Dog("bud");
-            Cat whi = new Cat("whi");
-            Animal an = new Animal("Create");
-            animals[0] = bud;
-            animals[1] = whi;
-            animals[2] = an;
-            foreach (Animal el in animals)
-            el.Makesound();
+            // Animal[] animals = new Animal[3];
+            // Dog bud = new Dog("bud");
+            // Cat whi = new Cat("whi");
+            // Animal an = new Animal("Create");
+            // animals[0] = bud;
+            // animals[1] = whi;
+            // animals[2] = an;
+            // foreach (Animal el in animals)
+            // el.Makesound();
+
+            // Shape математическое вычесление площади круга или радиуса
+            System.Console.WriteLine("Вычисление площади");
+            Shape[] sh = new Shape[2];
+            System.Console.Write("Ввведите радиус для вычисления площади круга: ");
+            double n = double.Parse(Console.ReadLine());
+            sh[0] = new Circle(n);
+            System.Console.Write("Введи ширину для вычесления площади прямоугольника: ");
+            double a = double.Parse(Console.ReadLine());
+            System.Console.Write("Введи высоту для вычесления площади прямоугольника: ");
+            double b = double.Parse(Console.ReadLine());
+            sh[1] = new Rectangle(a,b);
+            foreach(Shape el in sh)
+            {
+                System.Console.WriteLine($"Площадь: {el.GetArea():F2}");
+            }
+
+            
+            
+            
             
             
             
