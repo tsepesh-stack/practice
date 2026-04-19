@@ -190,11 +190,21 @@ namespace Training1
 
 
             // Instrument легая практика наследования
-            Instrument[] inst1 =new Instrument[1];
-            inst1[0] = new Piano();
-            foreach (Instrument el in inst1)
+            // Instrument[] inst1 =new Instrument[1];
+            // inst1[0] = new Piano();
+            // foreach (Instrument el in inst1)
+            // {
+            //     el.Play();
+            // }
+
+
+            // Vehicle выбор машины с опр характеристикой
+            Vehicle[] auto = new Vehicle[2];
+            auto[0] = new Car("Ford",1999,4);
+            auto[1] = new Truck("Cuber",2021,33);
+            foreach(Vehicle el in auto)
             {
-                el.Play();
+                el.Info();
             }
             
 

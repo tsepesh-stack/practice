@@ -1,25 +1,16 @@
 using System;
 namespace Training1
 {
-    class Car
+    class Car : Vehicle
     {
-        
-        private string model;
-        private int year;
-        static int totalCars;
-        public Car(string model, int year)
+        public int door {get; set;}
+        public Car(string brand, int year, int door) : base(brand, year)
         {
-            this.model = model; this.year = year;
-            System.Console.WriteLine($"Создана машина - {model}");
-            totalCars++;
+            this.door = door;
         }
-        public void Print()
+        public override void Info()
         {
-            System.Console.WriteLine($"Model: {model}, Year: {year}");
-        }
-        public static void PrintTotal()
-        {
-            System.Console.WriteLine($"Всего машин {totalCars}");
+            System.Console.WriteLine($"Бренд: {this.brand}, Год выпуска: {this.year}, Дверей: {this.door}");;
         }
     }
 }
