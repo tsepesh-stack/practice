@@ -199,15 +199,21 @@ namespace Training1
 
 
             // Vehicle выбор машины с опр характеристикой
-            Vehicle[] auto = new Vehicle[2];
-            auto[0] = new Car("Ford",1999,4);
-            auto[1] = new Truck("Cuber",2021,33);
-            foreach(Vehicle el in auto)
-            {
-                el.Info();
-            }
+            // Vehicle[] auto = new Vehicle[2];
+            // auto[0] = new Car("Ford",1999,4);
+            // auto[1] = new Truck("Cuber",2021,33);
+            // foreach(Vehicle el in auto)
+            // {
+            //     el.Info();
+            // }
             
-
+            // Transport наследование задание
+            Transport[] tr = new Transport[1];
+            tr[0] = new Bike("model", 21,42);
+            foreach(Transport el in tr)
+            {
+                el.Show();
+            }
             
             
             
