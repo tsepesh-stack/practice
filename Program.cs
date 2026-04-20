@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.PortableExecutable;
 namespace Training1
 {
     class Program
@@ -208,14 +209,149 @@ namespace Training1
             // }
             
             // Transport наследование задание
-            Transport[] tr = new Transport[1];
-            tr[0] = new Bike("model", 21,42);
-            foreach(Transport el in tr)
+            // Transport[] tr = new Transport[1];
+            // tr[0] = new Bike("model", 21,42);
+            // foreach(Transport el in tr)
+            // {
+            //     el.Show();
+            // }
+            
+
+
+            // Динамический массив list<int> 
+            // List<int> num = new List<int>();
+            // int n;
+            // do
+            // {
+            //     System.Console.WriteLine("Введите любое число, 0 завершит цикл");
+            //     n=int.Parse(Console.ReadLine());
+            //     if (n !=0){num.Add(n);}
+            // } while(n != 0);
+            // Console.Write("Числа: ");
+            // foreach (int el in num)
+            // Console.Write(el + " ");
+            // Console.WriteLine();
+            // int sum = 0;
+            // foreach (int el in num)
+            // sum += el;
+            // Console.WriteLine($"Сумма: {sum}");
+            // Console.WriteLine($"Количество: {num.Count}");
+
+
+
+            // Задание 2 с динамическим массивом ввод, добавление и вывод
+            // List<int> number = new List<int>();
+            // int n;
+            // do
+            // {
+            //     System.Console.Write("Enter number, 0 - stop: ");
+            //     n=int.Parse(Console.ReadLine());
+            //     if (n != 0)
+            //     {
+            //         number.Add(n);
+            //     }
+            // } while (n != 0);
+            // int res = 0;
+            // foreach(var el in number)
+            // {
+            //     System.Console.Write(el + " ");
+            // }
+            // foreach(var el in number)
+            // {
+            //     res += el;          
+            // }
+            // System.Console.WriteLine();
+            // System.Console.WriteLine($"Number in array: {number.Count}");
+            // System.Console.WriteLine($"Summa={res}");
+
+
+            // Задание 3 с динамическим массивом удаление и вставка
+            // List<string> fruct = new List<string>();
+            // fruct.Add("яблоко");
+            // fruct.Add("банан");
+            // fruct.Add("вишня");
+            // fruct.Add("дыня");
+            // fruct.Remove("банан");
+            // fruct.Insert(1,"апельсин");
+            // fruct[fruct.Count - 1] = "арбуз";
+            // Console.WriteLine(string.Join(", ", fruct));
+
+
+            // Сложное задание с динамическим массивом
+            List<int> number = new List<int>();
+            int n;
+            do
             {
-                el.Show();
-            }
-            
-            
+                System.Console.Write("Введите числа (0 для окончания): ");
+                n =int.Parse(Console.ReadLine());
+                if (n !=0)
+                {
+                    number.Add(n);
+                }
+            } while(n!=0);
+            int a;
+            int res;
+            do
+            {
+                System.Console.WriteLine();
+                System.Console.WriteLine("1 - Вывести список");
+                System.Console.WriteLine("2 - Удалить все чётные числа");
+                System.Console.WriteLine("3 - Найти максимальное и минимальное");
+                System.Console.WriteLine("4 - Отсортировать по возрастанию");
+                System.Console.WriteLine("0 - Выход");
+                a = int.Parse(Console.ReadLine());
+                if (a == 1)
+                {
+                    System.Console.Write("Список: ");
+                    foreach(int el in number)
+                    {
+                        System.Console.Write(el + " ");
+                    }
+                }
+                if (a == 2)
+                {
+                    List<int> oddNumbers = new List<int>();
+                    foreach (int el in number)
+                    {
+                        if (el % 2 != 0) 
+                        {
+                            oddNumbers.Add(el);
+                        }
+                    } 
+                    Console.Write("Чётные числа удалены. Список: ");
+                    foreach (int el in oddNumbers)
+                    {
+                        Console.Write(el + " ");
+                    }
+                }
+                if (a == 3)
+                {
+                    int max = number[0];
+                    int min = number[0];
+                    foreach (int el in number)
+                    {
+                        if (el > max)
+                        {
+                            max=el;
+                        }
+                        if (el < min)
+                        {
+                            min=el;
+                        }
+                    }
+                    System.Console.WriteLine($"Максимальное значение: {max}");
+                    System.Console.WriteLine($"Минимальное значение: {min}");
+                }
+                if (a== 4)
+                {
+                    number.Sort();
+                    System.Console.Write("Список: ");
+                    foreach(int el in number)
+                        {
+                            System.Console.Write(el + " ");
+                        }
+                }
+            } while(a!=0);
             
             
             
