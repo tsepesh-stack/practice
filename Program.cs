@@ -278,82 +278,103 @@ namespace Training1
 
 
             // Сложное задание с динамическим массивом
-            List<int> number = new List<int>();
-            int n;
-            do
-            {
-                System.Console.Write("Введите числа (0 для окончания): ");
-                n =int.Parse(Console.ReadLine());
-                if (n !=0)
-                {
-                    number.Add(n);
-                }
-            } while(n!=0);
-            int a;
-            int res;
-            do
-            {
-                System.Console.WriteLine();
-                System.Console.WriteLine("1 - Вывести список");
-                System.Console.WriteLine("2 - Удалить все чётные числа");
-                System.Console.WriteLine("3 - Найти максимальное и минимальное");
-                System.Console.WriteLine("4 - Отсортировать по возрастанию");
-                System.Console.WriteLine("0 - Выход");
-                a = int.Parse(Console.ReadLine());
-                if (a == 1)
-                {
-                    System.Console.Write("Список: ");
-                    foreach(int el in number)
-                    {
-                        System.Console.Write(el + " ");
-                    }
-                }
-                if (a == 2)
-                {
-                    List<int> oddNumbers = new List<int>();
-                    foreach (int el in number)
-                    {
-                        if (el % 2 != 0) 
-                        {
-                            oddNumbers.Add(el);
-                        }
-                    } 
-                    Console.Write("Чётные числа удалены. Список: ");
-                    foreach (int el in oddNumbers)
-                    {
-                        Console.Write(el + " ");
-                    }
-                }
-                if (a == 3)
-                {
-                    int max = number[0];
-                    int min = number[0];
-                    foreach (int el in number)
-                    {
-                        if (el > max)
-                        {
-                            max=el;
-                        }
-                        if (el < min)
-                        {
-                            min=el;
-                        }
-                    }
-                    System.Console.WriteLine($"Максимальное значение: {max}");
-                    System.Console.WriteLine($"Минимальное значение: {min}");
-                }
-                if (a== 4)
-                {
-                    number.Sort();
-                    System.Console.Write("Список: ");
-                    foreach(int el in number)
-                        {
-                            System.Console.Write(el + " ");
-                        }
-                }
-            } while(a!=0);
+            // List<int> number = new List<int>();
+            // int n;
+            // do
+            // {
+            //     System.Console.Write("Введите числа (0 для окончания): ");
+            //     n =int.Parse(Console.ReadLine());
+            //     if (n !=0)
+            //     {
+            //         number.Add(n);
+            //     }
+            // } while(n!=0);
+            // int a;
+            // int res;
+            // do
+            // {
+            //     System.Console.WriteLine();
+            //     System.Console.WriteLine("1 - Вывести список");
+            //     System.Console.WriteLine("2 - Удалить все чётные числа");
+            //     System.Console.WriteLine("3 - Найти максимальное и минимальное");
+            //     System.Console.WriteLine("4 - Отсортировать по возрастанию");
+            //     System.Console.WriteLine("0 - Выход");
+            //     a = int.Parse(Console.ReadLine());
+            //     if (a == 1)
+            //     {
+            //         System.Console.Write("Список: ");
+            //         foreach(int el in number)
+            //         {
+            //             System.Console.Write(el + " ");
+            //         }
+            //     }
+            //     if (a == 2)
+            //     {
+            //         List<int> oddNumbers = new List<int>();
+            //         foreach (int el in number)
+            //         {
+            //             if (el % 2 != 0) 
+            //             {
+            //                 oddNumbers.Add(el);
+            //             }
+            //         } 
+            //         Console.Write("Чётные числа удалены. Список: ");
+            //         foreach (int el in oddNumbers)
+            //         {
+            //             Console.Write(el + " ");
+            //         }
+            //     }
+            //     if (a == 3)
+            //     {
+            //         int max = number[0];
+            //         int min = number[0];
+            //         foreach (int el in number)
+            //         {
+            //             if (el > max)
+            //             {
+            //                 max=el;
+            //             }
+            //             if (el < min)
+            //             {
+            //                 min=el;
+            //             }
+            //         }
+            //         System.Console.WriteLine($"Максимальное значение: {max}");
+            //         System.Console.WriteLine($"Минимальное значение: {min}");
+            //     }
+            //     if (a== 4)
+            //     {
+            //         number.Sort();
+            //         System.Console.Write("Список: ");
+            //         foreach(int el in number)
+            //             {
+            //                 System.Console.Write(el + " ");
+            //             }
+            //     }
+            // } while(a!=0);
             
-            
+
+            // Is as задание на проверку знаний и закрепление 
+            List<Animal> an= new List<Animal>();
+            an.Add(new Dog("Bob"));
+            an.Add(new Cat("Meika"));
+            an.Add(new Animal("хз"));
+            foreach(Animal obj in an)
+            {
+                Dog dog = obj as Dog;
+                if(dog != null)
+                {
+                    Console.WriteLine("Это собака");
+                    obj.Makesound();
+                }
+                else if(obj is Cat)
+                {
+                    obj.Makesound();
+                } else
+                {
+                    obj.Makesound();
+                }
+            }
             
             
         }
