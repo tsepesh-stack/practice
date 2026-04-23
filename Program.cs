@@ -355,27 +355,36 @@ namespace Training1
             
 
             // Is as задание на проверку знаний и закрепление 
-            List<Animal> an= new List<Animal>();
-            an.Add(new Dog("Bob"));
-            an.Add(new Cat("Meika"));
-            an.Add(new Animal("хз"));
-            foreach(Animal obj in an)
-            {
-                Dog dog = obj as Dog;
-                if(dog != null)
-                {
-                    Console.WriteLine("Это собака");
-                    obj.Makesound();
-                }
-                else if(obj is Cat)
-                {
-                    obj.Makesound();
-                } else
-                {
-                    obj.Makesound();
-                }
-            }
+            // List<Animal> an= new List<Animal>();
+            // an.Add(new Dog("Bob"));
+            // an.Add(new Cat("Meika"));
+            // an.Add(new Animal("хз"));
+            // foreach(Animal obj in an)
+            // {
+            //     Dog dog = obj as Dog;
+            //     if(dog != null)
+            //     {
+            //         Console.WriteLine("Это собака");
+            //         obj.Makesound();
+            //     }
+            //     else if(obj is Cat)
+            //     {
+            //         obj.Makesound();
+            //     } else
+            //     {
+            //         obj.Makesound();
+            //     }
+            // }
             
+
+            // Задание на повторение List<>
+            List<Device> d1 = new List<Device>();
+            d1.Add(new Laptop("apple",16));
+            d1.Add(new Smartphone("sunsung",6.1));
+            foreach(var el in d1)
+            {
+                el.Show();
+            }
             
         }
     }

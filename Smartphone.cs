@@ -1,26 +1,15 @@
 using System;
 namespace Training1
 {
-    class Smartphone
+    class Smartphone : Device
     {
-        private string model;
-        private string version;
-        private int storage;
-        static int totalPhone;
-        public Smartphone(string model, string version, int storage)
+        public double Screen{get;set;}
+        public Smartphone(string brand, double Screen) :base(brand){this.Screen=Screen;}
+        public override void Show()
         {
-            this.model=model;
-            this.version=version;
-            this.storage=storage;
-            totalPhone++;
-        }
-        public void Print()
-        {
-            System.Console.WriteLine($"{model} {version}, {storage} ГБ");
-        }
-        public static void printTotal()
-        {
-            System.Console.WriteLine($"Phone total - {totalPhone}");
+            System.Console.WriteLine($"Бренд телефона {this.brand}, Screen {this.Screen} inches");
         }
     }
+    
+    
 }
