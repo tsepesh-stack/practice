@@ -388,12 +388,24 @@ namespace Training1
             
 
             // Задание от claude
-            List<Animal> an = new List<Animal>();
-            an.Add(new Dog("Бобик", 4));
-            an.Add(new Cat("Барсик",3));
-            foreach(Animal el in an)
+            // List<Animal> an = new List<Animal>();
+            // an.Add(new Dog("Бобик", 4));
+            // an.Add(new Cat("Барсик",3));
+            // foreach(Animal el in an)
+            // {
+            //     el.Makesound();
+            // }
+
+
+            // Абчстракция 
+            List<Vehicle> tr = new List<Vehicle>();
+            tr.Add(new Car("Ford",120));
+            tr.Add(new Boat("Medusa",60));
+            tr.Add(new Plane("Arflout",320));
+            foreach(Vehicle el in tr)
             {
-                el.Makesound();
+                el.GetInfo();
+                el.Move();
             }
         }
     }

@@ -3,14 +3,15 @@ namespace Training1
 {
     class Car : Vehicle
     {
-        public int door {get; set;}
-        public Car(string brand, int year, int door) : base(brand, year)
+        public Car(string name, int speed) :  base(name,speed){}
+        public override void GetInfo()
         {
-            this.door = door;
+            System.Console.WriteLine("Машина — термин, который означает техническое устройство, выполняющее механические движения для преобразования энергии, материалов и информации.");
         }
-        public override void Info()
+        public override void Move()
         {
-            System.Console.WriteLine($"Бренд: {this.brand}, Год выпуска: {this.year}, Дверей: {this.door}");;
+            base.Move();
         }
+        
     }
 }
