@@ -3,23 +3,22 @@ namespace Training1
 {
     class Product
     {
-        private string name;
+        public string Name {get; set;}
         private double price;
 
         public Product(string name, double price)
         {
-            this.name=name;
+            this.Name=name;
             this.price=price;
         }
         public Product(string name) : this(name, 0){}
         public Product() : this("неизвестно"){}
 
-        public string Name {get; set;}
+        
         public double Price
         {
             get
             {
-                System.Console.WriteLine("результат: ");
                 return this.price;
             }
             set
@@ -35,7 +34,7 @@ namespace Training1
         }
         public void Print()
         {
-            System.Console.WriteLine($"Товар: {name}, Цена: {price}");
+            System.Console.WriteLine($"Товар: {Name}, Цена: {price}");
         }
     }
 }

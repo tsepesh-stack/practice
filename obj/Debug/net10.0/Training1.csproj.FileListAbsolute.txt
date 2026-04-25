@@ -1,0 +1,15 @@
+C:\Users\89779\OneDrive\Desktop\Training1\bin\Debug\net10.0\Training1.exe
+C:\Users\89779\OneDrive\Desktop\Training1\bin\Debug\net10.0\Training1.deps.json
+C:\Users\89779\OneDrive\Desktop\Training1\bin\Debug\net10.0\Training1.runtimeconfig.json
+C:\Users\89779\OneDrive\Desktop\Training1\bin\Debug\net10.0\Training1.dll
+C:\Users\89779\OneDrive\Desktop\Training1\bin\Debug\net10.0\Training1.pdb
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.AssemblyInfoInputs.cache
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.AssemblyInfo.cs
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.csproj.CoreCompileInputs.cache
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.dll
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\refint\Training1.dll
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.pdb
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.genruntimeconfig.cache
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\ref\Training1.dll
+C:\Users\89779\OneDrive\Desktop\Training1\obj\Debug\net10.0\Training1.sourcelink.json

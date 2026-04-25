@@ -397,16 +397,34 @@ namespace Training1
             // }
 
 
-            // Абчстракция 
-            List<Vehicle> tr = new List<Vehicle>();
-            tr.Add(new Car("Ford",120));
-            tr.Add(new Boat("Medusa",60));
-            tr.Add(new Plane("Arflout",320));
-            foreach(Vehicle el in tr)
+            // Абстракция 
+            // List<Vehicle> tr = new List<Vehicle>();
+            // tr.Add(new Car("Ford",120));
+            // tr.Add(new Boat("Medusa",60));
+            // tr.Add(new Plane("Arflout",320));
+            // foreach(Vehicle el in tr)
+            // {
+            //     el.GetInfo();
+            //     el.Move();
+            // }
+
+
+            // Интерфейс
+            List<ISwithcable> gad = new List<ISwithcable>();
+            gad.Add(new Laptop("Ipad"));
+            gad.Add(new Phone("Apple"));
+            gad.Add(new Lamp("Lamp"));
+            foreach(ISwithcable el in gad)
             {
-                el.GetInfo();
-                el.Move();
+                el.TurnOn();
+                if (el is IChargeable chargeable)
+                {
+                    chargeable.Charge();
+                }
             }
+
+
+
         }
     }
 }

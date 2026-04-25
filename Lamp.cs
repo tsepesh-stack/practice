@@ -1,13 +1,12 @@
 using System;
 namespace Training1
 {
-    class Laptop : ISwithcable,IChargeable
+    class Lamp : ISwithcable
     {
         public string name{get;set;}
-        public Laptop(string name){this.name=name;}
+        public Lamp(string name){this.name=name;}
         public void TurnOn(){System.Console.WriteLine($"{name} включено");}
         public void TurnOff(){System.Console.WriteLine($"{name} выключено");}
-        public void Charge(){System.Console.WriteLine($"{name} заряжается...");}
     }
     
     
