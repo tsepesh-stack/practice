@@ -3,13 +3,10 @@ namespace Training1
 {
     class Cat : Animal
     {
-        public Cat(string name): base(name)
-        {
-            
-        }
+        public Cat(string name, int age): base(name,age){}
         public override void Makesound()
         {
-            System.Console.WriteLine("Meow");
+            System.Console.WriteLine($"Name {this.name}, age {this.age}, Meow");
         }
         
     }

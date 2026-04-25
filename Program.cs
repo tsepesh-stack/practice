@@ -378,14 +378,23 @@ namespace Training1
             
 
             // Задание на повторение List<>
-            List<Device> d1 = new List<Device>();
-            d1.Add(new Laptop("apple",16));
-            d1.Add(new Smartphone("sunsung",6.1));
-            foreach(var el in d1)
-            {
-                el.Show();
-            }
+            // List<Device> d1 = new List<Device>();
+            // d1.Add(new Laptop("apple",16));
+            // d1.Add(new Smartphone("sunsung",6.1));
+            // foreach(var el in d1)
+            // {
+            //     el.Show();
+            // }
             
+
+            // Задание от claude
+            List<Animal> an = new List<Animal>();
+            an.Add(new Dog("Бобик", 4));
+            an.Add(new Cat("Барсик",3));
+            foreach(Animal el in an)
+            {
+                el.Makesound();
+            }
         }
     }
 }

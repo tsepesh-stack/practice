@@ -4,13 +4,16 @@ namespace Training1
     class Animal
     {
         public string name{get; set;}
-        public Animal(string name)
+        public int age {get; set;}
+        public Animal(string name, int age)
+
         {
+            this.age=age;
             this.name = name;
         }
         public virtual void Makesound()
         {
-            System.Console.WriteLine("Some sound");
+            System.Console.WriteLine($"Name {this.name}, age {this.age}, Some sound");
         }
     }
 }
