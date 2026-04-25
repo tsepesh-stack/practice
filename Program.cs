@@ -115,7 +115,7 @@ namespace Training1
             // Person pr1 = new Person("Иван",10);
             // pr1.Print();
             // System.Console.WriteLine($"Совершеннолетний: {pr1.IsAdult()}");
-            
+
             // Book повторние тренировка
             // Book book1 = new Book("Война и мир", "Толстой");
             // book1.Print();
@@ -207,7 +207,7 @@ namespace Training1
             // {
             //     el.Info();
             // }
-            
+
             // Transport наследование задание
             // Transport[] tr = new Transport[1];
             // tr[0] = new Bike("model", 21,42);
@@ -215,7 +215,7 @@ namespace Training1
             // {
             //     el.Show();
             // }
-            
+
 
 
             // Динамический массив list<int> 
@@ -352,7 +352,7 @@ namespace Training1
             //             }
             //     }
             // } while(a!=0);
-            
+
 
             // Is as задание на проверку знаний и закрепление 
             // List<Animal> an= new List<Animal>();
@@ -375,7 +375,7 @@ namespace Training1
             //         obj.Makesound();
             //     }
             // }
-            
+
 
             // Задание на повторение List<>
             // List<Device> d1 = new List<Device>();
@@ -385,7 +385,7 @@ namespace Training1
             // {
             //     el.Show();
             // }
-            
+
 
             // Задание от claude
             // List<Animal> an = new List<Animal>();
@@ -410,21 +410,78 @@ namespace Training1
 
 
             // Интерфейс
-            List<ISwithcable> gad = new List<ISwithcable>();
-            gad.Add(new Laptop("Ipad"));
-            gad.Add(new Phone("Apple"));
-            gad.Add(new Lamp("Lamp"));
-            foreach(ISwithcable el in gad)
+            // List<ISwithcable> gad = new List<ISwithcable>();
+            // gad.Add(new Laptop("Ipad"));
+            // gad.Add(new Phone("Apple"));
+            // gad.Add(new Lamp("Lamp"));
+            // foreach(ISwithcable el in gad)
+            // {
+            //     el.TurnOn();
+            //     if (el is IChargeable chargeable)
+            //     {
+            //         chargeable.Charge();
+            //     }
+            // }
+
+
+            // калькулятор мини
+            int n;
+            int a;
+            int b;
+            int c;
+            double d;
+            double g;
+            string str1;
+            string str2;
+            Calculator calc = new Calculator();
+            do
             {
-                el.TurnOn();
-                if (el is IChargeable chargeable)
+                System.Console.WriteLine("Выберите действие");
+                System.Console.WriteLine("1=Два int — возвращает сумму");
+                System.Console.WriteLine("2=Два double — возвращает сумму");
+                System.Console.WriteLine("3=Три int — возвращает сумму всех трёх");
+                System.Console.WriteLine("4=Два string — возвращает склеенную строку");
+                System.Console.Write("0=Выход");
+                n= int.Parse(Console.ReadLine());
+                if (n == 1)
                 {
-                    chargeable.Charge();
+                    System.Console.WriteLine("Введите два int числа");
+                    System.Console.Write("Первое: ");
+                    a = int.Parse(Console.ReadLine());
+                    System.Console.Write("Второе: ");
+                    b = int.Parse(Console.ReadLine());
+                    calc.Calculate(a,b);
+                } else if (n == 2)
+                {
+                    System.Console.WriteLine("Введите два double числа");
+                    System.Console.Write("Первое: ");
+                    d = double.Parse(Console.ReadLine());
+                    System.Console.Write("Второе: ");
+                    g = double.Parse(Console.ReadLine());
+                    calc.Calculate(d,g);
+                } else if (n == 3)
+                {
+                     System.Console.WriteLine("Введите три int числа");
+                    System.Console.Write("Первое: ");
+                    a = int.Parse(Console.ReadLine());
+                    System.Console.Write("Второе: ");
+                    b = int.Parse(Console.ReadLine());
+                    System.Console.Write("третье: ");
+                    c = int.Parse(Console.ReadLine());
+                    calc.Calculate(a,b,c);
+                } else if (n == 4)
+                {
+                    System.Console.WriteLine("Введите два string");
+                    System.Console.Write("Первое: ");
+                    str1 = Console.ReadLine();
+                    System.Console.Write("Второе: ");
+                    str2 = Console.ReadLine();
+                    calc.Calculate(str1,str2);
                 }
-            }
-
-
-
+                
+            } while(n!=0);
+            System.Console.WriteLine("Программа закончена, спасибо!");
         }
+
     }
 }
